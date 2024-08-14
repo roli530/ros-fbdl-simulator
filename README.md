@@ -1,3 +1,12 @@
+# Fuzzy Behavior Description Language simulator for creating an testing complex behaviors
+One possible way to describe complex behaviours for robots is to use a fuzzy rule based system. The Fuzzy Behaviour Description Language (FBDL) is a language designed to be used for describing complex behaviour sets by language terms, which are close natural language terms. In order to enable the system to make decisions in those cases which are not covered by appropriate fuzzy rules in a given fuzzy control system, suitable Fuzzy Rule Interpolation (FRI) methods can be applied. The current FBDL engine incorporates the FIVE (Fuzzy Interpolation in Vague Environment) FRI method, therefore allowing the definition of behaviours by only specifying the most significant rules, which can be even performed by a human expert. In this paper, we propose an agent based simulator, which was designed for the preliminary observation and fine-tuning of the behaviours described with FBDL. It is also possible to modify these behaviours during runtime, and monitor their internal states in real-time. The presented simulator was implemented as a Robot Operating System (ROS) component, hence enabling the FBDL agents to control real robots as well.
+### Conference paper
+- [ICCC 2024](https://www.researchgate.net/publication/381908054_An_Agent_Based_Simulator_on_ROS_for_Fuzzy_Behavior_Description_Language_FBDL)
+  
+### Other projects in this topic:
+- [exprail-python](https://github.com/piller-imre/exprail-python)
+- [fribe-python](https://github.com/piller-imre/fribe-python)
+
 # Installation steps
 ## Required Environment:
 - ROS 2 Humble/Foxy
