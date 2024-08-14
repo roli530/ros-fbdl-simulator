@@ -1,0 +1,2 @@
+float32 canvas_height
+float32 canvas_width

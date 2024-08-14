@@ -1,0 +1,23 @@
+{
+  "obstackles": [],
+  "agents": [
+    {
+      "x": 0.23813461802249333,
+      "y": 0.43560132946276536,
+      "orientation": 0.7605076434324147,
+      "id": 1,
+      "name": "gg",
+      "fuzzy": "universe \"gg_distance\"\n\"close\"  0 0\n\"far\" 1000 1\nend\n\nuniverse \"gg_orientation_error\"\n\"max_left\"  -10 -1\n\"max_right\" 10 1\nend\n\nuniverse \"gg_state\"\n\"angry\"  -1 -1\n\"happy\" 1 1\nend\n\nuniverse \"gg_speed\"\n\"reverse\"  -1 -1\n\"high\" 1 1\nend\n\nuniverse \"gg_reached_objective\"\n\"no_objective\"  -1 -1\n\"special_object_number\" 1 1\nend\n\nuniverse \"gg_collision\"\n\"no_collision\"  0 0\n\"collision\" 1 1\nend\n\nuniverse \"gg_ray_collision\"\n\"close\"  0 -1\n\"far\" 1000 1\nend\n\nuniverse \"1_distance\"\n\"close\"  0 0\n\"far\" 1000 1\nend\n\nuniverse \"1_color\"\n\"red\"  -1 -1\n\"blue\" 1 1\nend\n\nuniverse \"1_orientation_error\"\n\"max_left\"  -10 -1\n\"max_right\" 10 1\nend\n\nuniverse \"angle\"\n\"max_left\"  -10 -1\n\"max_right\" 10 1\nend\n\nuniverse \"agent_status\"\n\"angry\"  -1 -1\n\"happy\" 1 1\nend\n\nuniverse \"speed\"\n\"reverse\"  -1 -1\n\"high\" 1 1\nend\n\nrulebase \"speed\"\n        rule\n            \"high\" when \"1_distance\" is \"close\"\n        end\n     \n        rule\n            \"high\" when \"1_distance\" is \"far\"\n        end\n        \n    end\n    \n\n    rulebase \"agent_status\"\n      rule\n        \"angry\" when \"1_distance\" is \"close\"\n       end\n        rule\n        \"happy\" when \"1_distance\" is \"far\"\n       end\n     end \n     \n     \n    rulebase \"angle\"\n           rule\n            \"max_left\" when \"1_orientation_error\" is \"max_left\"\n        end\n      \n        rule\n            \"max_right\" when \"1_orientation_error\" is \"max_right\"\n        end\n      \n    end\n\n",
+      "state": -1
+    }
+  ],
+  "special_objects": [
+    {
+      "id": 1,
+      "x": 0.3514344334078742,
+      "y": 0.6463126897811889,
+      "radius": 60,
+      "color": "1"
+    }
+  ]
+}

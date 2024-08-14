@@ -1,0 +1,39 @@
+{
+  "obstackles": [],
+  "agents": [
+    {
+      "x": 350.3800659179685,
+      "y": 262.55062866210915,
+      "orientation": -257.7374877929685,
+      "id": 1,
+      "name": "hz",
+      "fuzzy": "    universe \"2_distance\"\n        \"null\" 0 0\n        \"close\" 200 0.3\n        \"middle\" 300 0.5\n        \"far\" 1000 1\n    end\n    \n     universe \"1_distance\"\n        \"close\" 0 0\n        \"middle\" 300 0.5\n        \"far\" 1000 1\n    end\n    \n     universe \"hz_distance\"\n     \t\"null\" 0 0\n        \"close\" 200 0.3\n        \"middle\" 300 0.5\n        \"far\" 1000 1\n    end\n    \n      universe \"i7_distance\"\n     \t\"null\" 0 0\n        \"close\" 200 0.3\n        \"middle\" 300 0.5\n        \"far\" 1000 1\n    end\n    \n     universe \"hz_state\"\n       \"angry\" -1 -0.5\n       \"happy\" 1 0.5\n    end\n    \n     universe \"i7_state\"\n       \"angry\" -1 -1\n       \"happy\" 1 1\n    end\n    \n   \n    universe \"2_orientation_error\"\n    \"a\" -10 -1\n        \"left\" -0.5 -0.2\n        \"middle\" -0.2 -0.2\n        \"stop\" 0 0\n        \"middle_right\" 0.1 0.2\n        \"right\" 0.3 0.3\n    \"b\" 10 1\n    end\n    \n     universe \"1_orientation_error\"\n    \"a\" -10 -1\n        \"left\" -0.5 -0.2\n        \"middle\" -0.2 -0.2\n        \"stop\" 0 0\n        \"middle_right\" 0.1 0.2\n        \"right\" 0.3 0.3\n    \"b\" 10 1\n    end\n\t\n     \n     universe \"hz_orientation_error\"\n    \"a\" -10 -1\n        \"left\" -0.5 -0.2\n        \"middle\" -0.2 -0.2\n        \"stop\" 0 0\n        \"middle_right\" 0.1 0.2\n        \"right\" 0.3 0.3\n    \"b\" 10 1\n    end\n    \n       \n     universe \"i7_orientation_error\"\n    \"a\" -10 -1\n        \"left\" -0.5 -0.2\n        \"middle\" -0.2 -0.2\n        \"stop\" 0 0\n        \"middle_right\" 0.1 0.2\n        \"right\" 0.3 0.3\n    \"b\" 10 1\n    end\n    \n\n    universe \"angle\"\n  \n        \"left\" -0.5 -0.2\n        \"middle\" -0.2 -0.2\n        \"stop\" 0 0\n        \"middle_right\" 0.1 0.2\n        \"right\" 0.3 0.3\n    \n    end\n\n    universe \"speed\"\n        \"low\" 0 0.1\n        \n        \"middle\" 0.5 0.5\n        \"high\" 1 1\n    end\n \n    universe \"agent_state\"\n      \"angry\" -1 -1\n      \"happy\" 1 1\n    end\n \n    rulebase \"speed\"\n        rule\n            \"low\" when \"hz_distance\" is \"close\"\n        end\n        rule\n            \"middle\" when \"hz_distance\" is \"middle\"\n        end\n        rule\n            \"high\" when \"hz_distance\" is \"far\"\n        end\n        \n        rule\n            \"high\" when \"hz_state\" is \"angry\"\n        end\n    \n    end\n    \n\n    rulebase \"agent_state\"\n      rule\n        \"angry\" when \"2_distance\" is \"close\"\n       end\n        rule\n        \"happy\" when \"2_distance\" is \"far\"\n       end\n     end \n     \n     \n    rulebase \"angle\"\n           rule\n            \"left\" when \"1_orientation_error\" is \"left\"\n        end\n        rule\n            \"middle\" when \"1_orientation_error\" is \"middle\"\n        end\n        rule\n            \"right\" when \"1_orientation_error\" is \"right\"\n        end\n        rule\n            \"stop\" when \"1_orientation_error\" is \"stop\"\n        end\n        \n          rule\n            \"left\" when \"2_orientation_error\" is \"left\" and \"i7_state\" is \"angry\"\n        end\n        rule\n            \"middle\" when \"2_orientation_error\" is \"middle\" and \"i7_state\" is \"angry\"\n        end\n        rule\n            \"right\" when \"2_orientation_error\" is \"right\" and \"i7_state\" is \"angry\"\n        end\n        rule\n            \"stop\" when \"2_orientation_error\" is \"stop\" and \"i7_state\" is \"angry\"\n        end\n       \n    end\n\n    \n    \n\n    \n    \n    \n    \n\n    \n    ",
+      "state": 1
+    },
+    {
+      "x": 798.3379516601558,
+      "y": 126.06855773925776,
+      "orientation": -225.19732666015614,
+      "id": 2,
+      "name": "i7",
+      "fuzzy": "    universe \"2_distance\"\n        \"null\" 0 0\n        \"close\" 200 0.3\n        \"middle\" 300 0.5\n        \"far\" 1000 1\n    end\n    \n     universe \"1_distance\"\n        \"close\" 0 0\n        \"middle\" 300 0.5\n        \"far\" 1000 1\n    end\n    \n     universe \"hz_distance\"\n     \t\"null\" 0 0\n        \"close\" 200 0.3\n        \"middle\" 300 0.5\n        \"far\" 1000 1\n    end\n    \n      universe \"i7_distance\"\n     \t\"null\" 0 0\n        \"close\" 200 0.3\n        \"middle\" 300 0.5\n        \"far\" 1000 1\n    end\n    \n     universe \"hz_state\"\n       \"angry\" -1 -0.5\n       \"happy\" 1 0.5\n    end\n    \n     universe \"i7_state\"\n       \"angry\" -1 -1\n       \"happy\" 1 1\n    end\n    \n   \n    universe \"2_orientation_error\"\n    \"a\" -10 -1\n        \"left\" -0.5 -0.2\n        \"middle\" -0.2 -0.2\n        \"stop\" 0 0\n        \"middle_right\" 0.1 0.2\n        \"right\" 0.3 0.3\n    \"b\" 10 1\n    end\n    \n     universe \"1_orientation_error\"\n    \"a\" -10 -1\n        \"left\" -0.5 -0.2\n        \"middle\" -0.2 -0.2\n        \"stop\" 0 0\n        \"middle_right\" 0.1 0.2\n        \"right\" 0.3 0.3\n    \"b\" 10 1\n    end\n\t\n     \n     universe \"hz_orientation_error\"\n    \"a\" -10 -1\n        \"left\" -0.5 -0.2\n        \"middle\" -0.2 -0.2\n        \"stop\" 0 0\n        \"middle_right\" 0.1 0.2\n        \"right\" 0.3 0.3\n    \"b\" 10 1\n    end\n    \n       \n     universe \"i7_orientation_error\"\n    \"a\" -10 -1\n        \"left\" -0.5 -0.2\n        \"middle\" -0.2 -0.2\n        \"stop\" 0 0\n        \"middle_right\" 0.1 0.2\n        \"right\" 0.3 0.3\n    \"b\" 10 1\n    end\n    \n\n    universe \"angle\"\n  \n        \"left\" -0.5 -0.2\n        \"middle\" -0.2 -0.2\n        \"stop\" 0 0\n        \"middle_right\" 0.1 0.2\n        \"right\" 0.3 0.3\n    \n    end\n\n    universe \"speed\"\n        \"low\" 0 0.1\n        \n        \"middle\" 0.5 0.5\n        \"high\" 1 1\n    end\n \n    universe \"agent_state\"\n      \"angry\" -1 -1\n      \"happy\" 1 1\n    end\n \n    rulebase \"speed\"\n        rule\n            \"low\" when \"hz_distance\" is \"close\"\n        end\n        rule\n            \"middle\" when \"hz_distance\" is \"middle\"\n        end\n        rule\n            \"high\" when \"hz_distance\" is \"far\"\n        end\n        \n        rule\n            \"high\" when \"hz_state\" is \"angry\"\n        end\n    \n    end\n    \n\n    rulebase \"agent_state\"\n      rule\n        \"angry\" when \"2_distance\" is \"close\"\n       end\n        rule\n        \"happy\" when \"2_distance\" is \"far\"\n       end\n     end \n     \n     \n    rulebase \"angle\"\n           rule\n            \"left\" when \"2_orientation_error\" is \"left\"\n        end\n        rule\n            \"middle\" when \"2_orientation_error\" is \"middle\"\n        end\n        rule\n            \"right\" when \"2_orientation_error\" is \"right\"\n        end\n        rule\n            \"stop\" when \"2_orientation_error\" is \"stop\"\n        end\n        \n          rule\n            \"left\" when \"1_orientation_error\" is \"left\" and \"hz_state\" is \"angry\"\n        end\n        rule\n            \"middle\" when \"1_orientation_error\" is \"middle\" and \"hz_state\" is \"angry\"\n        end\n        rule\n            \"right\" when \"1_orientation_error\" is \"right\" and \"hz_state\" is \"angry\"\n        end\n        rule\n            \"stop\" when \"1_orientation_error\" is \"stop\" and \"hz_state\" is \"angry\"\n        end\n       \n    end\n\n    \n    \n\n    \n    \n    \n    \n\n    \n    ",
+      "state": -1
+    }
+  ],
+  "special_objects": [
+    {
+      "id": 1,
+      "x": 190.0838623046875,
+      "y": 239.66683959960938,
+      "radius": 60,
+      "color": "1"
+    },
+    {
+      "id": 2,
+      "x": 852.3760375976562,
+      "y": 187.027587890625,
+      "radius": 60,
+      "color": "1"
+    }
+  ]
+}

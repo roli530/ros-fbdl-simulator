@@ -1,0 +1,4 @@
+float32 distance
+float32 orientation_error
+float32 battery_level
+float32 nearest_distance

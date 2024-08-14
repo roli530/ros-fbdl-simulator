@@ -1,0 +1,157 @@
+body{
+    background-color: rgb(105, 109, 108);
+}
+
+.CodeMirror {
+  font-size: 14px; 
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+#canvas {
+    background-color: #e0e0e0;
+    padding: 10px;
+    flex: 1;
+}
+
+#box {
+    background-color: #f0f0f0;
+    padding: 10px;
+    flex: 1;
+}
+
+#state{
+
+    text-align: center;
+    overflow: auto;
+    background-color: #333333; 
+    color: #ffffff; 
+    
+}
+
+.code-viewer {
+    display: flex; /* Use flexbox to align items */
+  }
+
+
+#fuzzy{
+    position: absolute;
+    width: 98%;
+    text-align: center;
+    height: 10%;
+    bottom: 20px;
+    background-color: rgb(96, 103, 174);
+    
+}
+
+#wrapper {
+    
+    display: flex; 
+
+}
+
+  .button_class:hover {
+    background-color: #2980b9;
+  }
+
+  .button_class:active {
+    background-color: #216a94;
+  }
+
+  .button_class2:hover {
+    background-color: #2980b9;
+  }
+
+  .button_class2:active {
+    background-color: #216a94;
+  }
+
+  .button_class3:hover {
+    background-color: #2980b9;
+  }
+
+  .button_class3:active {
+    background-color: #216a94;
+  }
+
+  .button-container {
+    display: flex;
+    
+  }
+
+  /* Style for individual buttons */
+  .button_class,
+  .button_class2,
+  .button_class3 {
+    padding: 10px;
+  
+    border-radius: 5px;
+ 
+    background-color: #333333; ;
+    color: #ffffff;
+    border: 1px solid #000000;
+  }
+
+  .button_class{
+    margin-left: auto;
+  }
+
+  .button_class2{
+    margin: 0  auto;
+  }
+
+  .button_class3{
+    margin-right: auto;
+  }
+  #remove {
+    padding: 10px;
+  
+ 
+    border-radius: 5px;
+ 
+    background-color: #ff0000; ;
+    color: #ffffff;
+    border: 1px solid #000000;
+  }
+  
+#scrollableDiv {
+    height: 200px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enable vertical scrollbar if content exceeds the height */
+    border: 1px solid #ccc; /* Optional border for styling */
+  }
+
+  #box_diemnsion{
+    display: flex; /* Use flexbox to align items */
+  }
+
+  #universes {
+    width: 300px; /* Set a width for the container */
+    max-height: 300px; /* Set a maximum height for the container */
+    overflow: auto; /* Enable vertical scrollbar if needed */
+    background-color: #333333; ;
+    padding: 10px; /* Optional: Add padding for better appearance */
+  }
+
+  #box2 {
+    box-sizing: border-box;
+    background-color: #333333; 
+    max-height: 300px;
+    padding: 10px;
+    flex: 1;
+    overflow: auto;
+  }
+
+
+  .key {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .value {
+    font-style: italic;
+    color: rgb(0, 255, 34);
+  }

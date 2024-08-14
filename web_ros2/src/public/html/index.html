@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="../css/index.css">
+
+
+
+<script src="../libraries/p5.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/eventemitter2@6.4.9/lib/eventemitter2.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/roslib@1/build/roslib.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/theme/bespin.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/addon/mode/simple.min.js"></script>
+
+</head>
+
+
+<body>
+
+<h1 style="text-align: center;"> Agents with FRIBE</h1>
+
+<div id="box_diemnsion">
+          
+ 
+        <p >Agent name: <input type="text" id="nameInput" size="10"  name="name" value="">
+        <button  id="simulate" class="button_class">New agent</button> Width: 
+        <input type="text" id="obstacle_width" size="5" value="">
+        Height:<input type="text" id="obstacle_height"size="5"  value="">
+        <button id="change_dimension" class="button_class">Change dimesion</button>
+        <select id="file_list" style="padding: 10px; "name="files"></select>
+        <button id="load_state" class="button_class">Load</button>
+        <button  id="fbdl_template" class="button_class2">Template</button>
+        <button  id="remove">Remove</button>
+        
+</div>  
+
+<div class="container">
+   
+    <div id ="canvas"></div>
+       
+    <div id ="box">
+        <div id="state">
+                
+            <p id="agent_name" style="font-size: 30px;color:yellow">Agent name:</p>
+            
+            <p id="statistics" style="font-size: 30px;color:white">Statistics:</p>
+            
+        </div> 
+    </div> 
+</div>
+
+<p></p> 
+<div id="wrapper" >
+    <input type="button" id="compile" class="button_class" value="Compile" /> 
+    <button  id="continue" class="button_class">Start</button>
+    <button  id="stop" class="button_class">Pause</button>
+
+    <button  id="special_object" class="button_class2">New Special Object</button>
+    <button  id="new_obstackle" class="button_class2">New Obstackle</button>
+    <button  id="stop_adding" class="button_class2">Stop adding</button>
+    <button  id="change_weight" class="button_class2">Change weight</button>
+    
+    Weight:<input type="text" id="special_object_weight"size="5"  value="">
+<div>
+
+<select id="colors" style="padding: 10px;"name="colors">
+    <option value="1">RED</option>
+    <option value="2">GREEN</option>
+    <option value="3">BLUE</option>
+  </select>
+  <button  id="change_color" class="button_class">Change Color</button>
+</div>
+
+
+<button  id="load_fbdl" class="button_class">Load FBDL</button>
+<button  id="display_universes" class="button_class3">Dipslay universes</button>
+<button  id="save_state" class="button_class3">Save</button>
+
+
+</div>
+    <p></p>
+   <div class="code-viewer">
+       <textarea id="codearea" rows="18" cols="72"></textarea>
+       <div id ="box2">
+        
+         
+               <h3 style="color: yellow;">universes:</h3> <p id="universes" class ="key "></p>
+               <h3 style="color: yellow;">rulebases:</h3> <p id="rulebases" class ="key " ></p>
+            
+        
+    </div> 
+       
+       
+    </div>
+     
+    <p>Connection: <span id="status" style="font-weight: bold;">N/A</span></p>
+
+
+<script  src="../js/entity.js"></script>
+<script  src="../js/agent.js"></script>
+<script  src="../js/ros.js"></script>
+<script  src="../js/special_object.js"></script>
+
+<script  src="../js/main.js"></script>
+
+
+<script  src="../js/obstackle.js"></script>
+
+
+</body>
+
+
+</html>
